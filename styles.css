@@ -1,10 +1,15 @@
+/* Geral */
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     margin: 0;
-    padding: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
+/* Container principal */
 .container {
     width: 300px;
     margin: 50px auto;
@@ -14,23 +19,28 @@ body {
     border-radius: 8px;
 }
 
+/* Títulos */
 h1 {
     text-align: center;
 }
 
-input[type="text"] {
-    width: calc(100% - 60px);
+/* Estilização dos inputs */
+input[type="text"], 
+select, 
+button {
+    width: 100%;
+    max-width: 300px;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
+    margin: 5px 0;
 }
 
+/* Botões */
 button {
-    padding: 10px;
-    border: none;
     background-color: #28a745;
     color: white;
-    border-radius: 4px;
+    border: none;
     cursor: pointer;
 }
 
@@ -38,6 +48,7 @@ button:hover {
     background-color: #218838;
 }
 
+/* Listagem */
 ul {
     list-style: none;
     padding: 0;
@@ -48,12 +59,52 @@ li {
     justify-content: space-between;
     padding: 10px;
     border-bottom: 1px solid #ddd;
+    transition: all 0.3s ease;
 }
 
 li button {
     background-color: #dc3545;
+    margin-left: 10px;
 }
 
 li button:hover {
     background-color: #c82333;
+}
+
+/* Estilo das tarefas */
+.completed {
+    text-decoration: line-through;
+    color: grey;
+}
+
+/* Prioridade das tarefas */
+li.normal {
+    color: black;
+}
+
+li.alta {
+    color: red;
+}
+
+li.baixa {
+    color: green;
+}
+
+/* Efeitos de transição */
+.fade {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Tema escuro */
+.dark-theme {
+    background-color: #333;
+    color: white;
+}
+
+.dark-theme input, 
+.dark-theme button, 
+.dark-theme select {
+    background-color: #444;
+    color: white;
 }
